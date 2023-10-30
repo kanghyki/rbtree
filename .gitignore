@@ -3,3 +3,10 @@
 
 # ctags
 tags
+
+
+# lib
+*.a
+
+# test binary
+run_test
