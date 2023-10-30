@@ -1,4 +1,4 @@
-#include "Rbtree.hpp"
+#include "../inc/Rbtree.hpp"
 #include <iostream>
 
 Rbtree::Rbtree()
