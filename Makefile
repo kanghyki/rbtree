@@ -27,7 +27,7 @@ TEST_OBJS = $(TEST_SRCS:.c=.o)
 # * VARIABLE                                       *
 # **************************************************
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++11
 CPPFLAGS = -I $(INC_PATH)
 AR = ar
 ARFLAGS = -rcs
