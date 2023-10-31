@@ -347,15 +347,14 @@ class RBtree {
      * +---------------+
      */
     /*
-     * Case 1
      * node = mRootNode
      */
     void case1(RBnode<T>* node) {
       if (node->parent == NULL) return;
       case2(node);
     }
+
     /*
-     * Case 2
      * S = RED
      */
     void case2(RBnode<T>* node) {
@@ -370,8 +369,8 @@ class RBtree {
       }
       case3(node);
     }
+
     /*
-     * Case 3
      * P, S, S(L), S(R) = BLACK
      */
     void case3(RBnode<T>* node) {
@@ -387,8 +386,8 @@ class RBtree {
       }
       else case4(node);
     }
+
     /*
-     * Case 4
      * P = RED
      * S, S(L), S(R) = BLACK
      */
@@ -405,8 +404,8 @@ class RBtree {
       }
       else case5(node);
     }
+
     /*
-     * Case 5
      * S, S(One Child) = BLACK
      * S(other child) = RED
      */
@@ -432,8 +431,8 @@ class RBtree {
       }
       case6(node);
     }
+
     /*
-     * Case 6
      * S = BLACK
      * S(R) = RED
      */
@@ -454,6 +453,7 @@ class RBtree {
         rotateRight(p);
       }
     }
+
     /*
      * +---------------+
      * | UTIL          |
@@ -465,6 +465,7 @@ class RBtree {
     RBnode<T>* getGrandParentNode(RBnode<T>* node) {
       return node->parent->parent;
     }
+
     /*
      * Use only when the parent node is clearly present.
      * Return Uncle or nil.
@@ -476,6 +477,7 @@ class RBtree {
 
       return grandParentNode->left;
     }
+
     /*
      * Use only when the parent node is clearly present.
      * Return Sibling or nil.
@@ -486,6 +488,7 @@ class RBtree {
       if (node == p->left) return p->right;
       return p->left;
     }
+
     void swapNodeValue(RBnode<T>* dest, RBnode<T>* src) {
       const T tmp = src->value;
 
